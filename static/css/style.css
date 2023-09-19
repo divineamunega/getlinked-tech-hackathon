@@ -2,6 +2,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
+
 * {
 	margin: 0;
 	padding: 0;
@@ -22,9 +24,6 @@
 
 html {
 	font-size: 64.5%;
-
-	@media screen and (max-width: ) {
-	}
 }
 
 .nav {
@@ -38,8 +37,10 @@ html {
 	justify-content: space-between;
 
 	transition: 0.4s all;
-	&div {
-		height: 100%;
+
+	& > div.blur-grad {
+		bottom: -400%;
+		left: 20%;
 	}
 }
 
@@ -65,7 +66,7 @@ html {
 	align-items: center;
 	font-family: var(--font-2);
 
-	@media screen and (max-width: 1060px) {
+	@media screen and (max-width: 1168px) {
 		display: none;
 	}
 }
@@ -92,6 +93,7 @@ html {
 
 			&:hover {
 				/* Todo Put smth here */
+				/* color: red; */
 			}
 		}
 	}
@@ -115,10 +117,9 @@ html {
 	width: 300px;
 	height: 300px;
 	background-color: var(--color2);
-	bottom: -400%;
-	left: 20%;
 	border-radius: 50%;
 	filter: blur(150px);
+	z-index: -1;
 }
 
 .blur-grad > img {
@@ -132,13 +133,13 @@ html {
 	align-items: center;
 	justify-content: center;
 
-	@media screen and (min-width: 1060px) {
+	@media screen and (min-width: 1168px) {
 		display: none;
 	}
 }
 
 .toggle-btn .icon {
-	// height: 50px;
+	height: 50px;
 	width: 50px;
 	height: 50px;
 	cursor: pointer;
@@ -194,6 +195,8 @@ html {
 
 .landing {
 	width: 100%;
+	border-bottom: 2px solid var(--line);
+	height: fit-content;
 }
 
 .intro-text {
@@ -218,7 +221,7 @@ html {
 	}
 
 	@media screen and (max-width: 485px) {
-		font-size: 1.8rem;
+		font-size: 2rem;
 	}
 
 	@media screen and (max-width: 384px) {
@@ -243,12 +246,116 @@ html {
 
 .landing-contents {
 	width: 100%;
-	padding: 0 3%;
 	display: flex;
 	justify-content: space-between;
-	padding: 10%;
-	& .content {
+	align-items: start;
+	padding: 5% 10% 0;
+
+	& .content.text {
 		width: 50%;
-		background-color: red;
+		height: fit-content;
+	}
+
+	& .content.img {
+		position: relative;
+		width: 50%;
+	}
+
+	@media screen and (max-width: 991px) {
+		flex-direction: column;
+
+		& .content.text {
+			width: 100%;
+			text-align: center;
+		}
+
+		& .content.img {
+			width: 100%;
+		}
+	}
+}
+
+.heading {
+	white-space: nowrap;
+	font-size: 5rem;
+	font-family: var(--font-1);
+	color: white;
+	z-index: 100;
+	font-weight: 900;
+
+	@media screen and (max-width: 1062px) {
+		font-size: 4rem;
+	}
+
+	@media screen and (max-width: 497px) {
+		font-size: 3rem;
+	}
+
+	@media screen and (max-width: 400px) {
+		font-size: 2.5rem;
+	}
+}
+
+.support {
+	font-size: 10px;
+	color: white;
+	font-size: 1.9rem;
+	font-family: var(--font-2);
+	margin: 20px 0 30px;
+
+	@media screen and (max-width: 497px) {
+		font-size: 1.6rem;
+	}
+
+	@media screen and (max-width: 421px) {
+		font-size: 1.3rem;
+	}
+
+	@media screen and (max-width: 400px) {
+		font-size: 1.3rem;
+	}
+}
+
+.time {
+	display: flex;
+	margin: 50px 0;
+	font-size: 5rem;
+	font-family: Unica One, "cursive";
+	/* background-color: red; */
+	align-items: center;
+
+	@media screen and (max-width: 991px) {
+		justify-content: center;
+	}
+
+	& .t-box {
+		color: white;
+		margin: 0px 10px;
+	}
+}
+
+/* // Images */
+
+.content.img {
+	padding: 10px;
+	position: relative;
+	height: fit-content;
+	/* background-color: green; */
+	& .blur-grad {
+		/* filter: blur(0px) !important; */
+		right: 0;
+		top: 70px;
+	}
+
+	& img {
+		position: absolute;
+		height: 450px;
+		top: -30px;
+		left: 50%;
+		transform: translate(-50%);
+
+		&:first-child {
+			z-index: 4 !important;
+		}
 	}
 }
