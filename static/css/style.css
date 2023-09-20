@@ -457,8 +457,10 @@ html {
 
 .rules {
 	display: flex;
-	padding: 6% 7%;
+	padding: 1% 7%;
+	/* background-color: red; */
 	position: relative;
+	border-bottom: 1px solid var(--line);
 
 	& > .rule-box {
 		width: 50%;
@@ -469,13 +471,14 @@ html {
 	}
 
 	@media screen and (max-width: 991px) {
+		padding: 0% 5%;
 		flex-direction: column;
 	}
 }
 
 .rule-box.text {
-	margin-top: 100px;
-	/* position: relative; */
+	margin-top: 70px;
+	margin-bottom: 30px;
 
 	& .blur-grad {
 		/* filter: blur(0px); */
@@ -510,13 +513,12 @@ html {
 	@media screen and (max-width: 991px) {
 		order: -1;
 		height: 450px;
-		/* flex-direction: column; */
 	}
 	& img {
 		height: 100%;
 		object-fit: contain;
 		width: 100%;
-		object-position: right;
+		object-position: center;
 	}
 
 	& .blur-grad {
@@ -533,7 +535,26 @@ html {
 		top: 50%;
 
 		@media screen and (max-width: 991px) {
-			top: 90%;
+			top: 75%;
 		}
+	}
+}
+
+.attributes {
+	display: flex;
+
+	& .attr-box {
+		width: 50%;
+	}
+}
+
+.attr-box.text {
+	height: 400px;
+
+	& img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
 	}
 }
