@@ -518,4 +518,22 @@ html {
 		width: 100%;
 		object-position: right;
 	}
+
+	& .blur-grad {
+		filter: blur(100px);
+		height: 150px;
+		transform: rotate(270deg);
+		width: 300px; /* width = 2 * height */
+		/* background-color: red; */
+		border-top-left-radius: 50% 100%;
+		border-top-right-radius: 50% 100%;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		right: 0;
+		top: 50%;
+
+		@media screen and (max-width: 991px) {
+			top: 90%;
+		}
+	}
 }
