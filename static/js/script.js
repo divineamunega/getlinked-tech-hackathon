@@ -24,7 +24,7 @@ const moveDiv = function (container) {
 	movableDiv.style.backgroundColor = "#903aff";
 	movableDiv.style.position = "fixed";
 	movableDiv.style.left = "50%";
-	movableDiv.style.filter = "blur(50px)";
+	movableDiv.style.filter = "blur(40px)";
 	movableDiv.style.transition = "transform .15s ease";
 	movableDiv.style.top = "0";
 	movableDiv.style.left = "0";
@@ -32,8 +32,8 @@ const moveDiv = function (container) {
 	document.body.appendChild(movableDiv);
 
 	window.addEventListener("mousemove", (event) => {
-		const x = event.clientX - 75;
-		const y = event.clientY - 75;
+		const x = event.clientX - 50;
+		const y = event.clientY - 50;
 		// movableDiv.style.top = y + "px";
 		// movableDiv.style.left = x + "px";
 		movableDiv.style.transform = `translate(${x}px, ${y}px)`;
