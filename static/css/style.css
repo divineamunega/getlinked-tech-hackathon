@@ -968,15 +968,19 @@ html {
 
 .prize-box.img {
 	width: 40%;
+	position: relative;
 
 	& img {
 		width: 100%;
+	}
+	& .blur-grad {
+		/* filter: blur(1px); */
+		top: 40%;
 	}
 
 	@media screen and (max-width: 1199px) {
 		width: 100%;
 		margin: 0 auto;
-		/* background-color: red; */
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -1068,6 +1072,12 @@ html {
 		&:nth-child(2) {
 			width: 40%;
 			height: 230px;
+			background-color: #8f3aff35;
+			border: 1px solid var(--color2);
+
+			& .price {
+				color: var(--color2);
+			}
 			& img {
 				width: 90%;
 				top: -40%;
@@ -1097,5 +1107,185 @@ html {
 
 	@media screen and (max-width: 1199px) {
 		width: 100%;
+	}
+}
+
+.partners {
+	padding: 10% 20%;
+	& .head {
+		font-size: 3.2rem;
+		color: white;
+		text-align: center;
+		font-family: var(--font-1);
+		font-weight: 900;
+	}
+
+	& .support {
+		text-align: center;
+		width: 650px;
+		margin: 10px auto;
+		font-size: 1.7rem;
+		color: white;
+		font-family: var(--font-2);
+		margin-bottom: 100px;
+		@media screen and (max-width: 991px) {
+			font-size: 1.5rem;
+			text-align: center;
+			width: fit-content;
+		}
+	}
+
+	@media screen and (max-width: 991px) {
+		padding: 10% 5%;
+	}
+}
+
+.partner-cont {
+	width: 100%;
+	height: fit-content;
+	border: 1px solid var(--color2);
+	border-radius: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 50px;
+	margin: 10px;
+	padding: 3%;
+	justify-content: space-between;
+
+	& .partner-box {
+		width: 30%;
+		height: 160px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@media screen and (max-width: 991px) {
+			height: 120px;
+		}
+		.logo {
+			width: 90%;
+			height: 90%;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		&:first-child {
+			.logo {
+				background-image: url(../img/logo-liberty.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+				width: 45%;
+			}
+			.line {
+				border: 2px solid var(--color1);
+				position: absolute;
+				width: 90%;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: -5%;
+			}
+
+			.line2 {
+				border: 2px solid var(--color1);
+				position: absolute;
+				width: 1px;
+				right: -5%;
+				height: 70%;
+				top: 50%;
+				transform: translateY(-50%);
+				bottom: 10px;
+			}
+		}
+
+		&:nth-child(2) {
+			.line {
+				border: 2px solid var(--color1);
+				position: absolute;
+				width: 1px;
+				right: -5%;
+				height: 70%;
+				top: 50%;
+				transform: translateY(-50%);
+				bottom: 10px;
+			}
+
+			.line2 {
+				border: 2px solid var(--color1);
+				position: absolute;
+				width: 90%;
+				left: 0;
+				/* transform: translateX(-60%); */
+				bottom: -5%;
+			}
+			.logo {
+				background-image: url(../img/logo-liberty-pay.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+				width: 70%;
+			}
+		}
+
+		&:nth-child(3) {
+			.line2 {
+				border: 2px solid var(--color1);
+				position: absolute;
+				width: 90%;
+				left: 0;
+				/* transform: translateX(-60%); */
+				bottom: -5%;
+			}
+
+			.logo {
+				background-image: url(../img/logo-winwise.png);
+				width: 50%;
+			}
+		}
+
+		&:nth-child(4) {
+			.line2 {
+				border: 2px solid var(--color1);
+				position: absolute;
+				width: 1px;
+				right: -5%;
+				height: 70%;
+				top: 50%;
+				transform: translateY(-50%);
+				bottom: 10px;
+			}
+
+			.logo {
+				background-image: url(../img/logo-wisperms.png);
+				width: 50%;
+			}
+		}
+
+		&:nth-child(5) {
+			.line2 {
+				border: 2px solid var(--color1);
+				position: absolute;
+				width: 1px;
+				right: -5%;
+				height: 70%;
+				top: 50%;
+				transform: translateY(-50%);
+				bottom: 10px;
+			}
+
+			.logo {
+				background-image: url(../img/logo-pay-box.png);
+				width: 70%;
+			}
+		}
+
+		&:nth-child(6) {
+			.logo {
+				background-image: url(../img/log-visual-plus.png);
+				width: 80%;
+			}
+		}
 	}
 }
