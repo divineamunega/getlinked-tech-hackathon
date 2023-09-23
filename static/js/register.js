@@ -111,6 +111,7 @@ const registerUser = async function (obj) {
 	};
 
 	try {
+		openModal();
 		const res = await fetch(`${url}hackathon/registration`, requestOptions);
 		console.log(res);
 		if (!res.ok) throw new Error("Internect Connection Error");
