@@ -28,17 +28,35 @@ html {
 	font-size: 64.5%;
 }
 
+.nav {
+	@media screen and (max-width: 991px) {
+		display: none !important;
+	}
+}
+
 .main {
 	width: 100%;
-	height: 87vh;
-	padding: 7% 10% 5%;
+	height: fit-content;
+	padding: 4% 10% 1%;
 	display: flex;
+
+	@media screen and (max-width: 991px) {
+		flex-direction: column;
+	}
 
 	& .main-text {
 		width: 50%;
+
+		@media screen and (max-width: 991px) {
+			display: none;
+		}
 	}
 	& .main-form {
 		width: 50%;
+
+		@media screen and (max-width: 991px) {
+			width: 100%;
+		}
 	}
 }
 
@@ -88,4 +106,166 @@ html {
 }
 
 .main-form {
+	width: 100%;
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.03);
+	padding: 5% 5% 0%;
+
+	@media screen and (max-width: 991px) {
+		background-color: transparent;
+	}
+	& .head {
+		color: var(--color1);
+		font-family: var(--font-1);
+		font-size: 2rem;
+		font-weight: 900;
+		margin-bottom: 20px;
+	}
+
+	& .support-small {
+		color: white;
+		font-size: 1.5rem;
+		margin-bottom: 20px;
+		font-family: var(--font-2);
+		@media screen and (min-width: 991px) {
+			display: none;
+		}
+	}
+
+	& .input-content-big {
+		& input {
+			background-color: rgba(0, 0, 0, 0.03);
+			width: 100%;
+			height: 40px;
+			border: 0.5px solid white;
+			margin-bottom: 20px;
+			padding: 0px 30px;
+			caret-color: white;
+			color: white;
+			font-family: var(--font-2);
+
+			&::placeholder {
+				color: white;
+				font-family: var(--font-2);
+			}
+		}
+
+		/* @media screen and (max-width: 991px) {
+			display: none;
+		} */
+	}
+
+	& .input-content-small {
+		display: none;
+
+		@media screen and (max-width: 991px) {
+			display: block;
+		}
+
+		& input {
+			background-color: rgba(0, 0, 0, 0.03);
+			width: 100%;
+			height: 45px;
+			border: 0.5px solid white;
+			margin-bottom: 20px;
+			padding: 0px 30px;
+			caret-color: white;
+			color: white;
+			font-family: var(--font-2);
+
+			&::placeholder {
+				color: white;
+				font-family: var(--font-2);
+			}
+		}
+	}
+
+	& .message {
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.03);
+		height: 100px;
+		font-size: 1.2rem;
+		color: white;
+		font-family: var(--font-2);
+		padding: 10px 30px;
+		border: 1.5px solid white;
+
+		&::placeholder {
+			color: white;
+		}
+	}
+
+	.btn {
+		border: none;
+		outline: none;
+		display: block;
+		margin: 10px auto 20px;
+		bottom: 0px;
+
+		/* @media screen and (max-width: 991px) {
+			bottom: -30px;
+		} */
+	}
+
+	.share-on {
+		color: var(--color1);
+		font-size: 1.3rem;
+		font-family: var(--font-2);
+		position: absolute;
+		left: 50%;
+		bottom: -70px;
+		transform: translateX(-50%);
+
+		@media screen and (min-width: 991px) {
+			display: none;
+		}
+	}
+	.links {
+		width: 100%;
+		margin-top: 20px;
+		display: flex;
+		height: 20px;
+		margin-left: -15px;
+		align-items: center;
+		justify-content: center;
+		/* background-color: red; */
+		position: absolute;
+		bottom: -100px;
+
+		& .icon {
+			height: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			/* background-color: rebeccapurple; */
+			fill: white;
+			width: 30px;
+			margin-left: 10px;
+		}
+
+		@media screen and (min-width: 991px) {
+			display: none;
+		}
+	}
+}
+
+.back-link-btn {
+	position: fixed;
+	left: 10%;
+	top: 2%;
+	color: white;
+	font-size: 1.5rem;
+	border-radius: 50%;
+	border: 1px solid var(--color1);
+	padding: 10px;
+	height: 30px;
+	width: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+	cursor: pointer;
+	@media screen and (max-width: 991px) {
+		display: flex;
+	}
 }

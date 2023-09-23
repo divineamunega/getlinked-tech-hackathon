@@ -3,16 +3,17 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Getlinked || Divine Amunega</title>
+		<title>Getlinked Contact || Divine Amunega</title>
 		<link rel="stylesheet" href="./static/css/nav.css" />
 		<link rel="stylesheet" href="./static/css/contact.css" />
 		<script type="module" src="static/js/script.js"></script>
+		<script type="module" src="./static/js/contact.js"></script>
 	</head>
 	<body>
 		<!-- Navbar -->
 		<nav class="nav" style="border: none">
 			<div class="nav-brand-cont">
-				<a href="#" class="nav-brand">
+				<a href="./index.html" class="nav-brand">
 					<h2>get<span class="spcolor1">linked</span></h2>
 				</a>
 			</div>
@@ -25,7 +26,7 @@
 					<li><a href="./contact.html">Contact</a></li>
 				</ul>
 				<div class="nav-action">
-					<a href="#" class="btn btn-register">Register</a>
+					<a href="./register.html" class="btn btn-register active" >Register</a>
 				</div>
 			</div>
 
@@ -50,12 +51,13 @@
 					<li><a href="./index.html#timeline">Timeline</a></li>
 					<li><a href="./index.html#overview">Overview</a></li>
 					<li><a href="./index.html#faqs">FAQs</a></li>
-					<li><a href="./contact.html">Contact</a></li>
+					<li><a href="./contact.html" class="active">Contact</a></li>
 				</ul>
 				<a href="./register.html" class="btn btn-register">Register</a>
 			</div>
 		</nav>
 
+		<div class="back-link-btn"><</div>
 		<main class="main">
 			<div class="main-text">
 				<div class="big-screen">
@@ -104,19 +106,58 @@
 					Let us know about it!
 				</h3>
 
+				<p class="support-small">
+					Email us below to any question related to our event
+				</p>
+
 				<div class="input-content-big">
-					<input type="text" class="firstname" />
-					<input type="email" class="mail" />
-				</div>
-
-				<div class="input-content-small">
-					<input type="text" class="teamname" /><input
+					<input
 						type="text"
-						class="topic"
-					/><input type="text" class="email" />
+						class="firstname"
+						id="name"
+						placeholder="First Name"
+					/>
+					<input type="email" class="mail" id="mail" placeholder="Mail" />
+					<input type="number" id="number" placeholder="Phone Number" />
 				</div>
 
-				<textarea name="mesage" id="" class="message"></textarea>
+				<!-- <div class="input-content-small">
+					<input type="text" class="teamname" placeholder="First Name" />
+					<input type="email" class="topic" placeholder="Email" />
+				</div> -->
+
+				<textarea
+					name="mesage"
+					id="message"
+					class="message"
+					placeholder="Message"
+				></textarea>
+
+				<button class="btn btn-submit">Submit</button>
+				<p class="share-on">Share On</p>
+				<div class="links">
+					<a href="https://www.instagram.com/divinnnneee/">
+						<svg class="icon">
+							<use xlink:href="./static/img/sprite.svg#ig"></use>
+						</svg>
+					</a>
+					<a href="https://web.facebook.com/divineamunega1">
+						<svg class="icon">
+							<use xlink:href="./static/img/sprite.svg#fb"></use>
+						</svg>
+					</a>
+
+					<a href="https://twitter.com/divineamunega">
+						<svg class="icon">
+							<use xlink:href="./static/img/sprite.svg#x"></use>
+						</svg>
+					</a>
+					<a href="https://www.linkedin.com/in/divine-amunega-111ss/">
+						<svg class="icon">
+							<use xlink:href="./static/img/sprite.svg#in"></use>
+						</svg>
+					</a>
+				</div>
 			</form>
 		</main>
 	</body>

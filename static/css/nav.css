@@ -98,6 +98,19 @@ html {
 				color: var(--color1);
 				transition: 0.3s;
 			}
+
+			&:hover {
+				background-image: var(--gradient);
+				background-clip: text;
+				color: transparent;
+				-webkit-background-clip: text;
+			}
+			&.active {
+				background-image: var(--gradient);
+				background-clip: text;
+				color: transparent;
+				-webkit-background-clip: text;
+			}
 		}
 	}
 }
@@ -117,9 +130,21 @@ html {
 	transition: 0.4s;
 
 	&:hover {
-		transition: 0.4s;
-		background-color: var(--color1);
-		background-image: linear-gradient(to right, var(--color1), var(--color1));
+		border-width: 2px;
+		border-style: solid;
+		border-image: linear-gradient(50deg, var(--color1), var(--color2));
+		background-color: rgba(0, 0, 0, 0);
+		background-image: none;
+		border-image-slice: 1;
+	}
+
+	&.active {
+		border-width: 2px;
+		border-style: solid;
+		border-image: linear-gradient(50deg, var(--color1), var(--color2));
+		background-color: rgba(0, 0, 0, 0);
+		background-image: none;
+		border-image-slice: 1;
 	}
 }
 
