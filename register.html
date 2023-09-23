@@ -57,6 +57,116 @@
 			</div>
 		</nav>
 
-		<main class="main"></main>
+		<main class="main">
+			<div class="main-pic">
+				<img src="./static/img/register.png" alt="Register Image" />
+			</div>
+			<form action="submit" class="main-form">
+				<h3 class="head">Register</h3>
+				<p class="support">
+					Be part of this movement <span class="walk">🚶‍♂️🚶‍♀️</span>
+				</p>
+				<h2 class="create">Create Your Account</h2>
+
+				<div class="input-cont">
+					<div class="input-box">
+						<p class="itext">Team's Name</p>
+						<input
+							type="text"
+							id="team_name"
+							placeholder="Enter the name of your group"
+						/>
+					</div>
+					<div class="input-box">
+						<p class="itext">Phone</p>
+						<input
+							type="number"
+							id="phone"
+							placeholder="Enter Your Phone Number"
+						/>
+					</div>
+				</div>
+				<div class="input-cont">
+					<div class="input-box">
+						<p class="itext">Email</p>
+						<input
+							type="email"
+							id="email"
+							placeholder="Enter your email address"
+						/>
+					</div>
+					<div class="input-box">
+						<p class="itext">Project Topic</p>
+						<input
+							type="text"
+							id="topic"
+							placeholder="What is your project topic"
+						/>
+					</div>
+				</div>
+				<div class="input-cont">
+					<div class="input-box">
+						<p class="itext">Category</p>
+						<select
+							name="category"
+							id="category"
+							placeholder="select Your Category"
+						>
+							<option value="3">No Internet Reload</option>
+							<option value="3">No Internet Reload</option>
+						</select>
+					</div>
+					<div class="input-box">
+						<p class="itext">Group Size</p>
+						<select name="size" id="grp_size">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+					</div>
+				</div>
+
+				<p class="review">
+					Please review your registration details before submitting
+				</p>
+
+				<div class="check">
+					<input type="checkbox" name="terms" id="terms" />
+					<p>I agreed with the event terms and conditions and privacy policy</p>
+				</div>
+
+				<button type="submit" class="register">Register</button>
+			</form>
+		</main>
+
+		<div class="success">
+			<div class="suc-box">
+				<div class="img-box">
+					<img
+						src="./static/img/successfully-done-5108472-4288033 1.png"
+						alt=""
+					/>
+					<img src="static/img/successful-man-3025713-2526911 1.png" alt="" />
+				</div>
+
+				<h2 class="head">
+					Congratulations <br />You have successfuly registered
+				</h2>
+
+				<p class="support">
+					Yes, it was easy and you did it! <br />
+					check your mail box for next step 😂
+				</p>
+
+				<div class="btn close_modal">Back</div>
+			</div>
+		</div>
 	</body>
 </html>

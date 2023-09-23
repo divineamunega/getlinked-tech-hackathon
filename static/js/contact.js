@@ -12,6 +12,7 @@ const collectFormResult = function () {
 
 	let obj = {};
 	formData.forEach((dt) => {
+		console.log(dt);
 		if (!dt.value) throw new Error(`Fill the ${dt.id} box.`);
 		if (dt.id === "name") {
 			obj = { ...obj, first_name: dt.value };
