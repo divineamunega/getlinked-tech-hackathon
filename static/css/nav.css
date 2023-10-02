@@ -12,7 +12,7 @@
 
 :root {
 	scroll-behavior: smooth;
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 	background-color: #150e28;
 	--font-1: "Inter", sans-serif;
 
@@ -26,6 +26,10 @@
 
 html {
 	font-size: 64.5%;
+}
+
+body {
+	overflow-x: hidden;
 }
 
 .nav {
